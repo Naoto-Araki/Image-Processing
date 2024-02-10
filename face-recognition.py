@@ -52,17 +52,15 @@ while end_flag == True:
         #予測実行
         pred = clf.predict(recog)
 
-        if pred == "Ara":
-            name = "Araki"
+        #予測した画像のラベルから表示させる名前を決定する
+        if pred == "〇〇〇":
+            name = "〇〇〇"
             cv2.putText(frame, name, (x + 6, y + h - 6), cv2.FONT_HERSHEY_TRIPLEX, 1.0, (255, 255, 255), 2)
-        elif pred == "Hir":
-            name = "Hirose"
+        elif pred == "△△△":
+            name = "△△△"
             cv2.putText(frame, name, (x + 6, y + h - 6), cv2.FONT_HERSHEY_TRIPLEX, 1.0, (255, 255, 255), 2)
-        elif pred == "Sak":
-            name = "Sakai"
-            cv2.putText(frame, name, (x + 6, y + h - 6), cv2.FONT_HERSHEY_TRIPLEX, 1.0, (255, 255, 255), 2)  
-        else:
-            name = "知らない人"
+        elif pred == "□□□":
+            name = "□□□"
             cv2.putText(frame, name, (x + 6, y + h - 6), cv2.FONT_HERSHEY_TRIPLEX, 1.0, (255, 255, 255), 2)  
 
     cv2.imshow('image', frame)
