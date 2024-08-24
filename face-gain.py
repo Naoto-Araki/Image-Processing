@@ -15,7 +15,7 @@ for i in os.listdir(input_path):
     # 画像を取り込む
     img = cv2.imread(image_path)
 
-    # 画像が正しく読み込まれたかを確認
+    # 画像が正しく読み込まれたかの確認
     if img is not None:
         # 取り込んだ画像をグレースケールに変更
         img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
