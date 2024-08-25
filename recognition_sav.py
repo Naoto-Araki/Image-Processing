@@ -9,7 +9,7 @@ import pickle
 images = []
 labels = []
 
-#pathの場所は自分で指定する
+#pathの場所は自分で指定
 path = "img"
 
 for i in os.listdir(path):
